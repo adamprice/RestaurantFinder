@@ -2,7 +2,7 @@
 --
 The test took me about 4 hours to complete. 
 
-The absolute first thing I'd do is add unit tests. Normally I try and practise test driven development, where I write the tests first and then get them to pass when writing the application code.
+The absolute first thing I'd do is add unit tests. Normally I try and practise test driven development, where I write the tests first and then get them to pass when writing the application code. I would also have preferred to use a dependency injection framework like Dagger, to make testing easier in the long term.
 
 I'd have also liked to add some additional features. Currently when entering the outcode, it checks the input for a letter, letter, number or letter, letter, number, number sequence. It would be better if the applicaton could query a postcode database and only accept valid outcodes. This could offer the opportunity to offer suggestions to the user while they're entering their outcode. Also, it would be interesting to attempt automatically filling the outcode input field with the current outcode the user is in using GPS or from the user's own contact details if present on their device.
 
