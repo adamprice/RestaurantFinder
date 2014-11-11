@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Restaurant Finder</string>
+    <string name="action_settings">Settings</string>
+    <string name="postcode_input_hint">Enter outcode (e.g SE19)</string>
+    <string name="search_button">Search</string>
+    <string name="logo_description">Logo</string>
+    <string name="sample_text">Test</string>
+
+</resources>
