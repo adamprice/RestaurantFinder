@@ -12,6 +12,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -44,7 +47,7 @@ public class MainActivity extends Activity implements JustEatRestaurantInterface
         ButterKnife.inject(this);
 
         List<Restaurant> mRestaurants = new ArrayList<Restaurant>();
-        mJustEatRequestManager = new JustEatRequestManager(this, this);
+        mJustEatRequestManager = new JustEatRequestManager(this, new Gson(), Volley.newRequestQueue(getApplicationContext()));
         mRestaurantListAdapter = new RestaurantListAdapter(this, R.layout.restaurant_row, R.id.restaurant_name, mRestaurants);
         mRestaurantList.setAdapter(mRestaurantListAdapter);
     }

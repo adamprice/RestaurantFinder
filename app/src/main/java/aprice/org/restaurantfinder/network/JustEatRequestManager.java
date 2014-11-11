@@ -1,10 +1,6 @@
 package aprice.org.restaurantfinder.network;
 
-import android.content.Context;
-import android.util.Log;
-
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -29,10 +25,10 @@ public class JustEatRequestManager implements JustEatRestaurantResponseInterface
     private JustEatRestaurantInterface mDelegate;
     private Gson mGson;
 
-    public JustEatRequestManager(Context context, JustEatRestaurantInterface delegate) {
-        mRequestQueue = Volley.newRequestQueue(context.getApplicationContext());
+    public JustEatRequestManager(JustEatRestaurantInterface delegate, Gson gson, RequestQueue requestQueue) {
         mDelegate = delegate;
-        mGson = new Gson();
+        mGson = gson;
+        mRequestQueue = requestQueue;
     }
 
     public void requestRestaurantsInOutcode(String outcode) {
